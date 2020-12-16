@@ -1,449 +1,988 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <!-- Facebook sharing information tags -->
-    <meta property="og:title" content="{{Subject}}" />
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
-    <title>{{Subject}}</title>
-</head>
 
-<body bgcolor="#FAFAFA"
-    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height: 100% !important; width: 100% !important; background-color: #FAFAFA; margin: 0; padding: 0;">
-    <style type="text/css">
-        #outlook a {
-            padding: 0;
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            background: #f1f1f1;
         }
 
-        .body {
-            width: 100% !important;
-            -webkit-text-size-adjust: 100%;
+        /* What it does: Stops email clients resizing small text. */
+        * {
             -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],
+        /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img+div {
+            display: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u~div .email-container {
+                min-width: 320px !important;
+            }
+        }
+
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u~div .email-container {
+                min-width: 375px !important;
+            }
+            
+        }
+
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u~div .email-container {
+                min-width: 414px !important;
+            }
+            
+        }
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+        .primary {
+            background: #a8002f;
+        }
+
+        .bg_white {
+            background: #faf9f9;
+            color: white;
+        }
+
+        .bg_light {
+            background: #faf9f9;
+        }
+
+        .bg_black {
+            background: #000000;
+        }
+
+        .bg_dark {
+            background: linear-gradient(#008bd3, #00578a );
+        }
+
+        .email-section {
+            padding: 2.5em;
+        }
+
+        /*BUTTON*/
+        .btn {
+            padding: 10px 15px;
+        }
+
+        .btn.btn-primary {
+            border-radius: 30px;
+            background: #a8002f;
+            color: #faf9f9;
+        }
+
+@media screen and (max-device-width: 414px) {
+     .btn {
+            font-size: 12px;
+        }
+
+}
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+            margin-top: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.8;
+            color: rgba(0, 0, 0, .4);
+        }
+
+        a {
+            color: #a8002f;
+        }
+
+        table {}
+
+        /*LOGO*/
+
+        .logo h1 {
+            margin: 0;
+        }
+
+        .logo h1 a {
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /*HERO*/
+        .hero {
+            position: relative;
+        }
+
+        .hero img {}
+
+        .hero .text {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .hero .text h2 {
+            color: #faf9f9;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+
+        /*HEADING SECTION*/
+        .heading-section {}
+
+        .heading-section h2 {
+            color: #000000;
+            font-size: 28px;
+            margin-top: 0;
+            line-height: 1.4;
+        }
+
+        .heading-section .subheading {
+            margin-bottom: 20px !important;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0, 0, 0, .4);
+            position: relative;
+        }
+
+        .heading-section .subheading::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #a8002f;
+            margin: 0 auto;
+        }
+
+        .heading-section-white {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .heading-section-white h2 {
+            font-size: 28px;
+                line-height: 1;
+            padding-bottom: 0;
+        }
+
+        .heading-section-white h2 {
+            color: #faf9f9;
+        }
+
+        .heading-section-white .subheading {
+            margin-bottom: 0;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, .4);
+        }
+
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon img {}
+
+
+        /*SERVICES*/
+        .text-services {
+            padding: 10px 10px 0;
+            text-align: center;
+        }
+
+        .text-services h3 {
+            font-size: 20px;
+        }
+
+        /*BLOG*/
+        .text-services .meta {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /*TESTIMONY*/
+        .text-testimony .name {
+            margin: 0;
+        }
+
+        .text-testimony .position {
+            color: rgba(0, 0, 0, .3);
+
+        }
+
+
+        /*VIDEO*/
+        .img {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .img .icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: -25px;
+        }
+
+        .img .icon a {
+            display: block;
+            width: 60px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -25px;
+        }
+
+
+
+        /*COUNTER*/
+        .counter-text {
+            text-align: center;
+        }
+
+        .counter-text .num {
+            display: block;
+            color: #faf9f9;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .counter-text .name {
+            display: block;
+            color: rgba(255, 255, 255, .9);
+            font-size: 13px;
+        }
+
+
+        /*FOOTER*/
+
+        .footer {
+            color: rgba(255, 255, 255, .5);
+
+        }
+
+        .footer .heading {
+            color: #faf9f9;
+            font-size: 20px;
+        }
+
+        .footer ul {
             margin: 0;
             padding: 0;
         }
 
-        .ExternalClass {
-            width: 100%;
+        .footer ul li {
+            list-style: none;
+            margin-bottom: 10px;
         }
 
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-            line-height: 100%;
+        .footer ul li a {
+            color: rgba(255, 255, 255, 1);
         }
 
-        img {
-            outline: none;
-            text-decoration: none;
-            -ms-interpolation-mode: bicubic;
-        }
 
-        a img {
-            border: none;
-        }
+        @media screen and (max-width: 500px) {
 
-        p {
-            margin: 1em 0;
-        }
-
-        table td {
-            border-collapse: collapse;
-        }
-
-        /* hide unsubscribe from forwards*/
-        blockquote .original-only,
-        .WordSection1 .original-only {
-            display: none !important;
-        }
-
-        @media only screen and (max-width: 480px) {
-
-            body,
-            table,
-            td,
-            p,
-            a,
-            li,
-            blockquote {
-                -webkit-text-size-adjust: none !important;
+            .icon {
+                text-align: left;
             }
 
-            /* Prevent Webkit platforms from changing default text sizes */
-            body {
-                width: 100% !important;
-                min-width: 100% !important;
+            .text-services {
+                padding-left: 0;
+                padding-right: 20px;
+                text-align: left;
             }
 
-            /* Prevent iOS Mail from adding padding to the body */
-
-            #bodyCell {
-                padding: 10px !important;
-            }
-
-            #templateContainer {
-                max-width: 600px !important;
-                width: 100% !important;
-            }
-
-            h1 {
-                font-size: 24px !important;
-                line-height: 100% !important;
-            }
-
-            h2 {
-                font-size: 20px !important;
-                line-height: 100% !important;
-            }
-
-            h3 {
-                font-size: 18px !important;
-                line-height: 100% !important;
-            }
-
-            h4 {
-                font-size: 16px !important;
-                line-height: 100% !important;
-            }
-
-            #templatePreheader {
-                display: none !important;
-            }
-
-            /* Hide the template preheader to save space */
-
-            #headerImage {
-                height: auto !important;
-                max-width: 600px !important;
-                width: 100% !important;
-            }
-
-            .headerContent {
-                font-size: 20px !important;
-                line-height: 125% !important;
-            }
-
-            #bodyImage {
-                height: auto !important;
-                max-width: 560px !important;
-                width: 100% !important;
-            }
-
-            .bodyContent {
-                font-size: 18px !important;
-                line-height: 125% !important;
-            }
-
-            .templateColumnContainer {
-                display: block !important;
-                width: 100% !important;
-            }
-
-            .columnImage {
-                height: auto !important;
-                max-width: 260px !important;
-                width: 100% !important;
-            }
-
-            .leftColumnContent {
-                font-size: 16px !important;
-                line-height: 125% !important;
-            }
-
-            .rightColumnContent {
-                font-size: 16px !important;
-                line-height: 125% !important;
-            }
-
-            .footerContent {
-                font-size: 14px !important;
-                line-height: 115% !important;
-            }
-
-            .footerContent a {
-                display: block !important;
-            }
-
-            /* Place footer social and utility links on their own lines, for easier access */
         }
     </style>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" id="bodyTable"
-        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FAFAFA; border-collapse: collapse !important; height: 100% !important; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100% !important"
-        width="100%">
-        <tbody>
-            <tr>
-                <td align="center" id="bodyCell"
-                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; height: 100% !important; width: 100% !important; border-top-width: 4px; border-top-color: #dddddd; border-top-style: solid; margin: 0; padding: 20px;"
-                    valign="top">
-                    <!-- BEGIN TEMPLATE // -->
-                    <table border="0" cellpadding="0" cellspacing="0" id="templateContainer"
-                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; width: 600px; border: 1px solid #dddddd;">
-                        <tbody>
-                            <tr>
-                                <td align="center"
-                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                    valign="top">
-                                    <!-- BEGIN PREHEADER // -->
-                                    <table border="0" cellpadding="0" cellspacing="0" id="templatePreheader"
-                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FFFFFF; border-bottom-color: #CCCCCC; border-bottom-style: solid; border-bottom-width: 1px; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt"
-                                        width="100%">
-                                        <tbody>
-                                            <tr>
-                                                <td align="left" class="preheaderContent"
-                                                    pardot-region="preheader_content00"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #808080; font-family: Helvetica; font-size: 10px; line-height: 12.5px; text-align: left; padding: 10px 20px;"
-                                                    valign="top">Use this area to offer a short teaser of your email's
-                                                    content. Text here will show in the preview area of some email
-                                                    clients.</td>
-                                                <td align="left" class="preheaderContent"
-                                                    pardot-region="preheader_content01"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #808080; font-family: Helvetica; font-size: 10px; line-height: 12.5px; text-align: left; padding: 10px 20px 10px 0;"
-                                                    valign="top" width="180">Email not displaying correctly?<br>
-                                                    <a href="{{View_Online}}"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #606060; font-weight: normal; text-decoration: underline;"
-                                                        target="_blank">View it in your browser</a>.
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- // END PREHEADER -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center"
-                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                    valign="top">
-                                    <!-- BEGIN HEADER // -->
-                                    <table border="0" cellpadding="0" cellspacing="0" id="templateHeader"
-                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FFFFFF; border-bottom-color: #CCCCCC; border-bottom-style: solid; border-bottom-width: 1px; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt"
-                                        width="100%">
-                                        <tbody>
-                                            <tr pardot-repeatable="" class="">
-                                                <td align="left" class="headerContent" pardot-region="header_image"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 20px; font-weight: bold; line-height: 20px; text-align: left; vertical-align: middle; padding: 0;"
-                                                    valign="top"><img alt="" border="0" height="207"
-                                                        src="http://go.pardot.com/l/874871/2020-06-24/4dx9mx/874871/221557/paladin_logo_3x_1_.png"
-                                                        style="width: 909px; height: 207px; border-width: 0px; border-style: solid;"
-                                                        width="909"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- // END HEADER -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center"
-                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                    valign="top">
-                                    <!-- BEGIN BODY // -->
-                                    <table border="0" cellpadding="0" cellspacing="0" id="templateBody"
-                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FFFFFF; border-bottom-color: #CCCCCC; border-bottom-style: solid; border-bottom-width: 1px; border-collapse: collapse !important; border-top-color: #FFFFFF; border-top-style: solid; border-top-width: 1px; mso-table-lspace: 0pt; mso-table-rspace: 0pt"
-                                        width="100%">
-                                        <tbody>
-                                            <tr pardot-repeatable="">
-                                                <td align="left" class="bodyContent" pardot-region="body_content00"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 16px; line-height: 24px; text-align: left; padding: 20px;"
-                                                    valign="top">
-                                                    <h1
-                                                        style="color: #202020 !important; display: block; font-family: Helvetica; font-size: 26px; font-style: normal; font-weight: bold; letter-spacing: normal; line-height: 26px; margin: 0; padding-bottom:10px; text-align: left">
-                                                        Designing Your Template</h1>
 
-                                                    <h3
-                                                        style="color: #606060 !important; display: block; font-family: Helvetica; font-size: 16px; font-style: italic; font-weight: normal; letter-spacing: normal; line-height: 16px; margin: 0; padding-bottom:10px; text-align: left">
-                                                        Creating a good-looking email is simple</h3>
-                                                    Customize your template by clicking on the style editor tabs on your
-                                                    right. Set your fonts, colors, and styles. After setting your
-                                                    styling is all done you can click here in this area, delete the
-                                                    text, and start adding your own awesome content.
-                                                </td>
-                                            </tr>
-                                            <tr pardot-repeatable="">
-                                                <td align="left" class="bodyContent" pardot-region="body_content01"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 16px; line-height: 24px; text-align: left; padding: 0 20px;">
-                                                    <img alt="" id="bodyImage"
-                                                        src="/images/placeholder.php?width=560&amp;height=300"
-                                                        style="max-width: 560px; -ms-interpolation-mode: bicubic; height: auto; outline: none; text-decoration: none; display: inline; border: 0;">
-                                                </td>
-                                            </tr>
-                                            <tr pardot-repeatable="">
-                                                <td align="left" class="bodyContent" pardot-region="body_content02"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 16px; line-height: 24px; text-align: left; padding: 20px;"
-                                                    valign="top">
-                                                    <h2
-                                                        style="color: #404040 !important; display: block; font-family: Helvetica; font-size: 20px; font-style: normal; font-weight: bold; letter-spacing: normal; line-height: 20px; margin: 0; padding-bottom:10px; text-align: left">
-                                                        Styling Your Content</h2>
 
-                                                    <h4
-                                                        style="color: #808080 !important; display: block; font-family: Helvetica; font-size: 14px; font-style: italic; font-weight: normal; letter-spacing: normal; line-height: 14px; margin: 0; padding-bottom:10px; text-align: left">
-                                                        Make your email easy to read</h4>
-                                                    After you enter your content, highlight the text you want to style
-                                                    and select the options you set in the style editor in the
-                                                    "<em>styles</em>" tab. Want to <a href="#"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #336699; font-weight: normal; text-decoration: underline;">get
-                                                        rid of styling on a bit of text</a>, but having trouble doing
-                                                    it? Just use the "<em>remove formatting</em>" button to strip the
-                                                    text of any formatting and reset your style.
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- // END BODY -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center"
-                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                    valign="top">
-                                    <!-- BEGIN COLUMNS // -->
-                                    <table border="0" cellpadding="20" cellspacing="0" id="templateColumns"
-                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FFFFFF; border-bottom-color: #CCCCCC; border-bottom-style: solid; border-bottom-width: 1px; border-collapse: collapse !important; border-top-color: #FFFFFF; border-top-style: solid; border-top-width: 1px; mso-table-lspace: 0pt; mso-table-rspace: 0pt"
-                                        width="100%">
-                                        <tbody>
-                                            <tr pardot-repeatable="">
-                                                <td align="left"
-                                                    style="padding-bottom: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                                    valign="top">
-                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
-                                                        class="templateColumnContainer"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; display: inline; width: 260px;">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td align="left" class="leftColumnContent"
-                                                                    pardot-region="left_column_image"
-                                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 14px; line-height: 21px; text-align: left; padding: 0 0 20px;">
-                                                                    <img alt="" class="columnImage"
-                                                                        src="/images/placeholder.php?width=260&amp;height=120"
-                                                                        style="max-width: 260px; -ms-interpolation-mode: bicubic; height: auto; outline: none; text-decoration: none; display: inline; border: 0;">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="left" class="leftColumnContent"
-                                                                    pardot-region="left_column_content"
-                                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 14px; line-height: 21px; text-align: left; padding: 0 0 20px;"
-                                                                    valign="top">
-                                                                    <h3
-                                                                        style="color: #606060 !important; display: block; font-family: Helvetica; font-size: 16px; font-style: italic; font-weight: normal; letter-spacing: normal; line-height: 16px; margin: 0; padding-bottom:10px; text-align: left">
-                                                                        Repeatable Content</h3>
-                                                                    <strong>Repeatable content blocks:</strong> Hover
-                                                                    over the drop arrow in the upper right of a region
-                                                                    to toggle a menu of options unique to that section,
-                                                                    like 'Copy', 'Move Row Up', or 'Delete'. You can
-                                                                    also <a href="#"
-                                                                        style="color: #336699; font-weight: normal; text-decoration: underline; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"
-                                                                        target="_blank">get a little fancy</a>: repeat
-                                                                    blocks and remove all text to make image "gallery"
-                                                                    sections, or do the opposite and remove images for
-                                                                    text-only blocks!
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+</head>
 
-                                                    <table align="right" border="0" cellpadding="0" cellspacing="0"
-                                                        class="templateColumnContainer"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; display: inline; width: 260px;">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td align="left" class="rightColumnContent"
-                                                                    pardot-region="right_column_image"
-                                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 14px; line-height: 21px; text-align: left; padding: 0 0 20px;">
-                                                                    <img alt="" class="columnImage"
-                                                                        src="/images/placeholder.php?width=260&amp;height=120"
-                                                                        style="max-width: 260px; -ms-interpolation-mode: bicubic; height: auto; outline: none; text-decoration: none; display: inline; border: 0;">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="left" class="rightColumnContent"
-                                                                    pardot-region="right_column_content"
-                                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #505050; font-family: Helvetica; font-size: 14px; line-height: 21px; text-align: left; padding: 0 0 20px;"
-                                                                    valign="top">
-                                                                    <h3
-                                                                        style="color: #606060 !important; display: block; font-family: Helvetica; font-size: 16px; font-style: italic; font-weight: normal; letter-spacing: normal; line-height: 16px; margin: 0; padding-bottom:10px; text-align: left">
-                                                                        Repeatable Content</h3>
-                                                                    <strong>Repeatable content blocks:</strong> Hover
-                                                                    over the drop arrow in the upper right of a region
-                                                                    to toggle a menu of options unique to that section,
-                                                                    like 'Copy', 'Move Row Up', or 'Delete'. You can
-                                                                    also <a href="#"
-                                                                        style="color: #336699; font-weight: normal; text-decoration: underline; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"
-                                                                        target="_blank">get a little fancy</a>: repeat
-                                                                    blocks and remove all text to make image "gallery"
-                                                                    sections, or do the opposite and remove images for
-                                                                    text-only blocks!
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- // END COLUMNS -->
-                                </td>
-                            </tr>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+    <center style="width: 100%; background-color: #494846;">
+        <div
+            style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        </div>
+        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!-- BEGIN BODY -->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="margin: auto;">
+                <tr>
+                    <td class="bg_white logo" style="padding: 1em 2.5em; text-align: center" >
+                    <img src="./asset/paladin_logo_1_.png" >
+                    </td>
+                </tr><!-- end tr -->
+                <tr>
+                    <td valign="middle" class="hero"
+                        style="background-image: url(./asset/orange_gradient_b.png); background-size: cover; height: 400px;">
+                        <table>
                             <tr>
-                                <td align="center"
-                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                    valign="top">
-                                    <!-- BEGIN FOOTER // -->
-                                    <table border="0" cellpadding="0" cellspacing="0" id="templateFooter"
-                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FFFFFF; border-collapse: collapse !important; border-top-color: #FFFFFF; border-top-style: solid; border-top-width: 1px; mso-table-lspace: 0pt; mso-table-rspace: 0pt"
-                                        width="100%">
-                                        <tbody>
-                                            <tr pardot-removable="">
-                                                <td align="left" class="footerContent" pardot-region="footer_content00"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #808080; font-family: Helvetica; font-size: 10px; line-height: 15px; text-align: left; padding: 20px;"
-                                                    valign="top"><a href="#"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #606060; font-weight: normal; text-decoration: underline;">Follow
-                                                        on Twitter</a>&nbsp;&nbsp;&nbsp;<a href="#"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #606060; font-weight: normal; text-decoration: underline;">Friend
-                                                        on Facebook</a>&nbsp;&nbsp;&nbsp;<a href="{{addthis_url_email}}"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #606060; font-weight: normal; text-decoration: underline;">Forward
-                                                        to Friend</a>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="left" class="footerContent" pardot-region="footer_content01"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #808080; font-family: Helvetica; font-size: 10px; line-height: 15px; text-align: left; padding: 0 20px 20px;"
-                                                    valign="top"><em>Copyright © {{Current_Year}}, All rights
-                                                        reserved.</em><br>
-                                                    <br>
-                                                    <strong>Our mailing address is:</strong><br>
-                                                    {{{Organization.Address}}}
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="left" class="footerContent original-only"
-                                                    pardot-region="footer_content02"
-                                                    style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #808080; font-family: Helvetica; font-size: 10px; line-height: 15px; text-align: left; padding: 0 20px 20px;"
-                                                    valign="top"><a href="{{Unsubscribe}}"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #606060; font-weight: normal; text-decoration: underline;">unsubscribe
-                                                        from all emails</a>&nbsp;&nbsp;&nbsp;<a
-                                                        href="{{EmailPreferenceCenter}}"
-                                                        style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #606060; font-weight: normal; text-decoration: underline;">update
-                                                        subscription preferences</a>&nbsp;</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- // END FOOTER -->
+                                <td>
+                                    <div class="text" style="padding: 0 3em; text-align: center;">
+                                        <h2>We Serve Healthy &amp; Delicious Foods</h2>
+                                        <p>A small river named Duden flows by their place and supplies it with the
+                                            necessary regelialia. It is a paradisematic country, in which roasted parts
+                                            of sentences fly into your mouth.</p>
+                                        <p><a href="#" class="btn btn-primary">Get Your Order Here!</a></p>
+                                    </div>
                                 </td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <!-- // END TEMPLATE -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <!--
-          This email was originally designed by the wonderful folks at MailChimp and remixed by Pardot.
-          It is licensed under CC BY-SA 3.0
-        -->
+                        </table>
+                    </td>
+                </tr><!-- end tr -->
+                <tr>
+                    <td class="bg_white">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td class="bg_dark email-section" style="text-align:center;">
+                                    <div class="heading-section heading-section-white">
+                                        <span class="subheading">Welcome</span>
+                                        <h2>Welcome To RestoBar</h2>
+                                        <p>A small river named Duden flows by their place and supplies it with the
+                                            necessary regelialia. It is a paradisematic country, in which roasted parts
+                                            of sentences fly into your mouth.</p>
+                                    </div>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td class="bg_white email-section">
+                                    <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                        <span class="subheading">Services</span>
+                                        <h2>Our Services</h2>
+                                        <p>A small river named Duden flows by their place and supplies it with the
+                                            necessary regelialia.</p>
+                                    </div>
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="icon">
+                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                                style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-services">
+                                                            <h3>Healthy Foods</h3>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="icon">
+                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                                style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-services">
+                                                            <h3>Original Recipes</h3>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td class="bg_light email-section" style="text-align:center;">
+                                    <table>
+                                        <tr>
+                                            <!-- <td class="img">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" width="600" height=""
+                                                                alt="alt_text" border="0"
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"
+                                                                class="g-img">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div class="icon">
+                                                    <a href="#">
+                                                        <img src="images/002-play-button.png" alt=""
+                                                            style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 20px;">
+                                                <h2>Watch Our Video</h2>
+                                                <p>A small river named Duden flows by their place and supplies it with
+                                                    the necessary regelialia. It is a paradisematic country, in which
+                                                    roasted parts of sentences fly into your mouth.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td> -->
+                            </tr><!-- end: tr -->
+                            <!-- <tr>
+                                <td class="bg_white email-section">
+                                    <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                        <span class="subheading">Menu</span>
+                                        <h2>Our Delicious Food</h2>
+                                        <p>A small river named Duden flows by their place and supplies it with the
+                                            necessary regelialia.</p>
+                                    </div>
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td style="padding-right: 10px;">
+                                                            <img src="images/menu-1.jpg" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-services" style="text-align: left;">
+                                                            <h3>Pasta, Sauce Milk</h3>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td style="padding-left: 10px;">
+                                                            <img src="images/menu-2.jpg" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-services" style="text-align: left;">
+                                                            <h3>Sweetened Fruits</h3>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr> -->
+
+                            <tr>
+                                <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="text-services"
+                                                            style="text-align: left; padding: 20px 30px;">
+                                                            <div class="heading-section">
+                                                                <span class="subheading">Lorem.</span>
+                                                                <h2 style="font-size: 22px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, ad?
+                                                                </h2>
+                                                                <p>A small river named Duden flows by their place and
+                                                                    supplies it with the necessary regelialia.</p>
+                                                                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="text-services"
+                                                            style="text-align: left; padding: 20px 30px;">
+                                                            <div class="heading-section">
+                                                                <span class="subheading">Lunch</span>
+                                                                <h2 style="font-size: 22px;">Grilled Beef with potatoes
+                                                                </h2>
+                                                                <p>A small river named Duden flows by their place and
+                                                                    supplies it with the necessary regelialia.</p>
+                                                                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="text-services"
+                                                            style="text-align: left; padding: 20px 30px;">
+                                                            <div class="heading-section">
+                                                                <span class="subheading">Dinner</span>
+                                                                <h2 style="font-size: 22px;">Grilled Beef with potatoes
+                                                                </h2>
+                                                                <p>A small river named Duden flows by their place and
+                                                                    supplies it with the necessary regelialia.</p>
+                                                                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <!-- <tr>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="images/bg_5.jpg" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr> -->
+                                                        <!-- <td class="text-services"
+                                                            style="text-align: left; padding: 20px 30px;">
+                                                            <div class="heading-section">
+                                                                <span class="subheading">Dessert</span>
+                                                                <h2 style="font-size: 22px;">Grilled Beef with potatoes
+                                                                </h2>
+                                                                <p>A small river named Duden flows by their place and
+                                                                    supplies it with the necessary regelialia.</p>
+                                                                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                            </div>
+                                                        </td>
+                                                    </tr> -->
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td valign="middle" class="counter"
+                                    style="background-image: url(images/bg_1.jpg); background-size: cover; padding: 4em 0;">
+                                    <table>
+                                        <tr>
+                                            <td valign="middle" width="25%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="counter-text">
+                                                            <span class="num">9457</span>
+                                                            <span class="name">Happy Customer</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="25%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="counter-text">
+                                                            <span class="num">20</span>
+                                                            <span class="name">Years of Experienced</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="25%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="counter-text">
+                                                            <span class="num">80</span>
+                                                            <span class="name">Branches</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="middle" width="25%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td class="counter-text">
+                                                            <span class="num">980</span>
+                                                            <span class="name">Staff</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end tr -->
+                            <tr>
+                                <td class="bg_white email-section">
+                                    <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                        <span class="subheading">Blog</span>
+                                        <h2>Read Stories</h2>
+                                        <p>A small river named Duden flows by their place and supplies it with the
+                                            necessary regelialia.</p>
+                                    </div>
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td style="padding-right: 10px;">
+                                                            <img src="images/blog-1.jpg" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-services" style="text-align: left;">
+                                                            <p class="meta"><span>Posted on Feb 18, 2019</span>
+                                                                <span>Food</span></p>
+                                                            <h3>Healthy Foods For Kids</h3>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td style="padding-left: 10px;">
+                                                            <img src="images/blog-2.jpg" alt=""
+                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-services" style="text-align: left;">
+                                                            <p class="meta"><span>Posted on Feb 18, 2019</span>
+                                                                <span>Food</span></p>
+                                                            <h3>A Fresh Food Organic</h3>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+                            <tr>
+                                <td class="bg_light email-section">
+                                    <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                        <span class="subheading">Says</span>
+                                        <h2>Testimonial</h2>
+                                        <p>A small river named Duden flows by their place and supplies it with the
+                                            necessary regelialia.</p>
+                                    </div>
+                                    <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="images/person_1.jpg" alt=""
+                                                                style="width: 100px; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block; border-radius: 50%;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-testimony" style="text-align: center;">
+                                                            <h3 class="name">Ronald Tuff</h3>
+                                                            <span class="position">Businessman</span>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%" style="padding-top: 20px;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                    width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="images/person_2.jpg" alt=""
+                                                                style="width: 100px; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block; border-radius: 50%;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-testimony" style="text-align: center;">
+                                                            <h3 class="name">Willam Clarson</h3>
+                                                            <span class="position">Businessman</span>
+                                                            <p>Far far away, behind the word mountains, far from the
+                                                                countries</p>
+                                                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr><!-- end: tr -->
+
+                        </table>
+
+                    </td>
+                </tr><!-- end:tr -->
+                <!-- 1 Column Text + Button : END -->
+            </table>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="margin: auto;">
+                <tr>
+                    <td valign="middle" class="bg_black footer email-section">
+                        <table>
+                            <tr>
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-right: 10px;">
+                                                <h3 class="heading">RestoBar</h3>
+                                                <p>A small river named Duden flows by their place and supplies it with
+                                                    the necessary regelialia.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                                                <h3 class="heading">Contact Info</h3>
+                                                <ul>
+                                                    <li><span class="text">203 Fake St. Mountain View, San Francisco,
+                                                            California, USA</span></li>
+                                                    <li><span class="text">+2 392 3929 210</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-left: 10px;">
+                                                <h3 class="heading">Useful Links</h3>
+                                                <ul>
+                                                    <li><a href="#">Breakfast</a></li>
+                                                    <li><a href="#">Lunch</a></li>
+                                                    <li><a href="#">Dinner</a></li>
+                                                    <li><a href="#">Dessert</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr><!-- end: tr -->
+                <tr>
+                    <td valign="middle" class="bg_black footer email-section">
+                        <table>
+                            <tr>
+                                <td valign="top" width="33.333%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-right: 10px;">
+                                                <p>&copy; 2018 Restobar. All Rights Reserved</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="33.333%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
+                                                <p><a href="#" style="color: rgba(255,255,255,.4);">Unsubcribe</a></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </center>
 </body>
 
 </html>
