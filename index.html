@@ -135,7 +135,7 @@
         }
 
         .bg_black {
-            background: #000000;
+            background: #a8002f;
         }
 
         .bg_dark {
@@ -157,7 +157,7 @@
             color: #faf9f9;
         }
 
-@media screen and (max-device-width: 414px) {
+@media screen and (max-device-width: 500px) {
      .btn {
             font-size: 12px;
         }
@@ -171,13 +171,18 @@
 
 }
 
+@media screen and (max-device-width: 500px) {
+    .heading-section h2 {
+        font-size: 16px ! important;
+    }
+}
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
-            color: #000000;
+            color: #494949;
             margin-top: 0;
         }
 
@@ -186,7 +191,7 @@
             font-weight: 400;
             font-size: 15px;
             line-height: 1.8;
-            color: rgba(0, 0, 0, .4);
+            color: #494949;
         }
 
         a {
@@ -196,7 +201,9 @@
         table {}
 
         /*LOGO*/
-
+.logo {
+    background: #faf9f9;
+}
         .logo h1 {
             margin: 0;
         }
@@ -236,7 +243,7 @@
         }
 
         .heading-section h2 {
-            color: #000000;
+            color: #494949;
             font-size: 28px;
             margin-top: 0;
             line-height: 1.4;
@@ -265,9 +272,7 @@
             margin: 0 auto;
         }
 
-        .heading-section-white {
-            color: rgba(255, 255, 255, .8);
-        }
+       
 
         .heading-section-white h2 {
             font-size: 28px;
@@ -285,22 +290,14 @@
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: rgba(255, 255, 255, .4);
+            color: #98948b;
         }
-
-
-        .icon {
-            text-align: center;
-        }
-
-        .icon img {}
-
 
         /*SERVICES*/
         .text-services {
             padding: 10px 10px 0;
             text-align: center;
-            color: red;
+            color: #494949;
 
         }
        
@@ -314,103 +311,15 @@
             text-transform: uppercase;
             font-size: 14px;
         }
-
-        /*TESTIMONY*/
-        .text-testimony .name {
-            margin: 0;
-        }
-
-        .text-testimony .position {
-            color: rgba(0, 0, 0, .3);
-
-        }
-
-
-        /*VIDEO*/
-        .img {
-            width: 100%;
-            height: auto;
-            position: relative;
-        }
-
-        .img .icon {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin-top: -25px;
-        }
-
-        .img .icon a {
-            display: block;
-            width: 60px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -25px;
-        }
-
-
-
-        /*COUNTER*/
-        .counter-text {
-            text-align: center;
-        }
-
-        .counter-text .num {
-            display: block;
-            color: #faf9f9;
-            font-size: 34px;
-            font-weight: 700;
-        }
-
-        .counter-text .name {
-            display: block;
-            color: rgba(255, 255, 255, .9);
-            font-size: 13px;
-        }
-
-
         /*FOOTER*/
 
         .footer {
-            color: rgba(255, 255, 255, .5);
-
+            color: #989898;
         }
 
         .footer .heading {
             color: #faf9f9;
             font-size: 20px;
-        }
-
-        .footer ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        .footer ul li {
-            list-style: none;
-            margin-bottom: 10px;
-        }
-
-        .footer ul li a {
-            color: rgba(255, 255, 255, 1);
-        }
-
-
-        @media screen and (max-width: 500px) {
-
-            .icon {
-                text-align: left;
-            }
-
-            .text-services {
-                padding-left: 0;
-                padding-right: 20px;
-                text-align: left;
-            }
-
         }
     </style>
 
@@ -418,7 +327,7 @@
 </head>
 
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-    <center style="width: 100%; background-color: #494846;">
+    <center style="width: 100%; background-color: #98948b;">
         <div
             style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
             &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
@@ -429,7 +338,7 @@
                 style="margin: auto;">
                 <tr>
                     <td class="bg_white logo" style="padding: 1em 2.5em; text-align: center" >
-                    <img src="./asset/paladin_logo_1_.png" >
+                    <img src="./asset/paladin-logo.png" >
                     </td>
                 </tr><!-- end tr -->
                 <tr>
@@ -464,7 +373,7 @@
                                     </div>
                                 </td>
                             </tr><!-- end: tr -->
-                            <tr>
+                            <!-- <tr>
                                 <td class="bg_white email-section">
                                     <div class="heading-section" style="text-align: center; padding: 0 30px;">
                                         <span class="subheading">Services</span>
@@ -479,7 +388,7 @@
                                                     width="100%">
                                                     <tr>
                                                         <td class="icon">
-                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                            <img src="https://www.colorcombos.com/images/colors/FFA300.png" alt=""
                                                                 style="width: 100px; max-width: 600px; height: auto; margin: auto; display: block;">
                                                         </td>
                                                     </tr>
@@ -497,7 +406,7 @@
                                                     width="100%">
                                                     <tr>
                                                         <td class="icon">
-                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                            <img src="https://www.colorcombos.com/images/colors/FFA300.png" alt=""
                                                                 style="width: 100px; max-width: 600px; height: auto; margin: auto; display: block;">
                                                         </td>
                                                     </tr>
@@ -513,7 +422,7 @@
                                         </tr>
                                     </table>
                                 </td>
-                            </tr><!-- end: tr -->
+                            </tr> -->
                             <tr>
                                 <td class="bg_light email-section" style="text-align:center;">
                                     <table>
@@ -522,7 +431,7 @@
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" width="600" height=""
+                                                            <img src="https://www.colorcombos.com/images/colors/FFA300.png" width="600" height=""
                                                                 alt="alt_text" border="0"
                                                                 style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"
                                                                 class="g-img">
@@ -628,7 +537,7 @@
                                                     width="100%">
                                                     <tr>
                                                         <td>
-                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                            <img src="https://www.colorcombos.com/images/colors/FFA300.png" alt=""
                                                                 style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
                                                         </td>
                                                     </tr>
@@ -647,7 +556,7 @@
                                                     width="100%">
                                                     <tr>
                                                         <td>
-                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                            <img src="https://www.colorcombos.com/images/colors/FFA300.png" alt=""
                                                                 style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
                                                         </td>
                                                     </tr>
@@ -702,7 +611,7 @@
                                                     width="100%">
                                                     <tr>
                                                         <td>
-                                                            <img src="https://www.beautycolorcode.com/00bfe4.png" alt=""
+                                                            <img src="https://www.colorcombos.com/images/colors/FFA300.png" alt=""
                                                                 style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
                                                         </td>
                                                     </tr>
@@ -802,7 +711,7 @@
                                     </table>
                                 </td> -->
                             <!-- </tr> -->
-                            <tr>
+                            <!-- <tr>
                                 <td class="bg_white email-section">
                                     <div class="heading-section" style="text-align: center; padding: 0 30px;">
                                         <span class="subheading">Blog</span>
@@ -820,7 +729,7 @@
                                                             <img src="images/blog-1.jpg" alt=""
                                                                 style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                     <!-- <tr>
                                                         <td class="text-services" style="text-align: left;">
                                                             <p class="meta"><span>Posted on Feb 18, 2019</span>
@@ -930,6 +839,7 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td style="text-align: left; padding-right: 10px;">
+                                                <img src="./asset/paladin-icon_2.png" style="width: 40px"; height: "55px">
                                                 <h3 class="heading">RestoBar</h3>
                                                 <p>A small river named Duden flows by their place and supplies it with
                                                     the necessary regelialia.</p>
