@@ -89,52 +89,36 @@
         img.g-img+div {
             display: none !important;
         }
-
-        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-        /* Create one of these media queries for each additional viewport size you'd like to fix */
-
         /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
         @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
             u~div .email-container {
                 min-width: 320px !important;
             }
         }
-
         /* iPhone 6, 6S, 7, 8, and X */
         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
             u~div .email-container {
                 min-width: 375px !important;
             }
-            
         }
-
         /* iPhone 6+, 7+, and 8+ */
         @media only screen and (min-device-width: 414px) {
             u~div .email-container {
                 min-width: 414px !important;
             }
-            
         }
     </style>
-
-    <!-- CSS Reset : END -->
-
-    <!-- Progressive Enhancements : BEGIN -->
     <style>
-        .primary {
-            background: #a8002f;
-        }
-
         .bg_white {
             background: #faf9f9;
-            color: white;
+            color: #faf9f9;
         }
 
         .bg_light {
             background: #faf9f9;
         }
 
-        .bg_black {
+        .bg_rasberry {
             background: #a8002f;
         }
 
@@ -161,16 +145,19 @@
      .btn {
             font-size: 12px;
         }
-        .text-services h3 {
-            font-size: 16px !important;
-            text-align: center;
+        .text-services {
+            padding: 15px  !important;
+        }
+         .text-services h2 {
+            font-size: 14px !important;
         }
          .text-services p {
-             text-align: center;
+             line-height: 1.4 !important;
          }
+        
 }
 
-@media screen and (max-device-width: 500px) {
+@media screen and (min-device-width: 376px) and (max-device-width: 500px) {
     .heading-section h2 {
         font-size: 16px ! important;
     }
@@ -463,7 +450,7 @@
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
                 style="margin: auto;">
                 <tr>
-                    <td valign="middle" class="bg_black footer email-section">
+                    <td valign="middle" class="bg_rasberry footer email-section">
                         <table>
                             <tr>
                                 <td valign="top" width="100%" style="padding-top: 20px;">
