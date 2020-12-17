@@ -3,14 +3,18 @@
     xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-    <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <meta charset="utf-8" />
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting" />
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
 
-
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet" />
 
     <!-- CSS Reset : BEGIN -->
     <style>
@@ -30,7 +34,7 @@
         }
 
         /* What it does: Centers email on Android 4.4 */
-        div[style*="margin: 16px 0"] {
+        div[style*='margin: 16px 0'] {
             margin: 0 !important;
         }
 
@@ -98,7 +102,7 @@
         }
 
         /* iPhone 6, 6S, 7, 8, and X */
-        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        @media only screen and (min-device-width: 413px) {
             u~div .email-container {
                 min-width: 375px !important;
             }
@@ -107,7 +111,7 @@
         /* iPhone 6+, 7+, and 8+ */
         @media only screen and (min-device-width: 414px) {
             u~div .email-container {
-                min-width: 414px !important;
+                max-width: 414px !important;
             }
         }
     </style>
@@ -118,15 +122,16 @@
         }
 
         .bg_light {
-            background: #faf9f9;
+            background: #faf9f9 !important;
         }
 
         .bg_rasberry {
             background: #a8002f;
+
         }
 
         .bg_dark {
-            background: linear-gradient(#008bd3, #00578a);
+            background: linear-gradient(#008bd3, #00578a) !important;
         }
 
         .email-section {
@@ -135,13 +140,13 @@
 
         /*BUTTON*/
         .btn {
-            padding: 10px 15px;
+            padding: 10px 15px !important;
         }
 
         .btn.btn-primary {
-            border-radius: 30px;
-            background: #00abd4;
-            color: #faf9f9;
+            border-radius: 30px !important;
+            background: #00abd4 !important;
+            color: #faf9f9 !important;
         }
 
         .email-section p {
@@ -172,12 +177,12 @@
             td.bg_white.logo {
                 padding: 10px !important;
             }
-
         }
 
-        @media screen and (min-device-width: 376px) and (max-device-width: 500px) {
+        @media screen and (max-device-width: 500px) {
             .heading-section h2 {
-                font-size: 16px ! important;
+                font-size: 22px !important;
+                padding-top: 20px;
             }
         }
 
@@ -208,23 +213,28 @@
 
         /*LOGO*/
         .logo {
-            background: #faf9f9;
+            background: #faf9f9 !important;
         }
 
         /*HERO*/
         .hero {
             position: relative;
-            background-image: url(http://go.pardot.com/l/874871/2020-11-18/4gylqv/874871/1605725739DLkgMMNY/orange_gradient_b.png);
+            background-image: url(http://go.pardot.com/l/874871/2020-11-18/4gylqv/874871/1605725739DLkgMMNY/orange_gradient_b.png) !important;
+        }
+
+        .hero-btn {
+            padding-bottom: 20px;
         }
 
         .hero .text {
-            color: rgba(255, 255, 255, .8);
+            color: rgba(255, 255, 255, 0.8) !important;
         }
 
         .hero .text h2 {
-            color: #faf9f9;
+            color: #faf9f9 !important;
             font-size: 30px;
             margin-bottom: 0;
+            padding-top: 25px;
         }
 
         /*HEADING SECTION*/
@@ -241,7 +251,7 @@
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: rgba(152, 148, 139, .8);
+            color: rgba(152, 148, 139, 0.8);
             position: relative;
         }
 
@@ -264,7 +274,7 @@
         }
 
         .heading-section-white h2 {
-            color: #faf9f9;
+            color: #faf9f9 !important;
         }
 
         .heading-section-white .subheading {
@@ -295,11 +305,11 @@
 
         /*FOOTER*/
         .footer {
-            color: rgba(152, 148, 139, .8);
+            color: rgba(152, 148, 139, 0.8);
         }
 
         .footer .heading {
-            color: #faf9f9;
+            color: #faf9f9 !important;
             font-size: 20px;
         }
 
@@ -309,322 +319,457 @@
             color: #faf9f9 !important;
         }
     </style>
-
-
 </head>
 
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-    <center style="width: 100%; background-color: #98948b;">
-        <div
-            style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-            ‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
-        </div>
+<body
+    style="margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#eaeaeb;">
+    <center class="wrapper"
+        style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#eaeaeb;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="100%" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;border-spacing:0;font-family:Arial, sans-serif;color:#333333;" bgcolor="#eaeaeb" >
+        <tr>
+        <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;" >
+        <![endif]-->
+        <center style="width: 100%; background-color: #98948b">
+            <div style="
+          display: none;
+          font-size: 1px;
+          max-height: 0px;
+          max-width: 0px;
+          opacity: 0;
+          overflow: hidden;
+          mso-hide: all;
+          font-family: sans-serif;
+        ">‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+            </div>
 
-        <div class="email-container" style="max-width: 600px; margin: 0 auto;">
-            <!-- BEGIN BODY -->
-            <div pardot-repeatable="">&nbsp;</div>
+            <div class="email-container" style="max-width: 600px; margin: 0 auto">
+                <!-- BEGIN BODY -->
+                <div pardot-repeatable="">&nbsp;</div>
 
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;"
-                width="100%">
-                <tbody>
-                    <tr>
-                        <td class="bg_white logo" pardot-data="" pardot-region=""
-                            style="padding: 1em 2.5em; text-align: center; background: rgb(250, 249, 249);"><img alt=""
-                                border="0" height="69"
-                                src="http://go.pardot.com/l/874871/2020-06-24/4dx9n4/874871/221563/paladin_logo_1_.png"
-                                style="width: 303px; height: 69px; border-width: 0px; border-style: solid;"
-                                width="303"><img alt="" border="0" height="69"></td>
-                    </tr>
-                    <!-- end tr -->
-                    <tr>
-                        <td class="hero" cover="" pardot-region="" style="background-size:=&quot;&quot;">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td pardot-region="">
-                                            <div class="text" style="padding: 0 3em; text-align: center;">
-                                                <h2>Lorem, ipsum dolor.</h2>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                    style="margin: auto" width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="bg_white logo" pardot-data="" pardot-region="" style="
+                  padding: 1em 1.5em;
+                  text-align: center;
+                  background: rgb(250, 249, 249);
+                "><img alt="" border="0" height="69"
+                                    src="http://go.pardot.com/l/874871/2020-06-24/4dx9n4/874871/221563/paladin_logo_1_.png"
+                                    style="
+                    width: 303px;
+                    height: 69px;
+                    border-width: 0px;
+                    border-style: solid;
+                  " width="303"><img alt="" border="0" height="69"></td>
+                        </tr>
+                        <!-- end tr -->
+                        <tr>
+                            <td class="hero" cover="" pardot-data="" pardot-region="" style="
+                background: #ffa300;
+                ">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td pardot-region="">
+                                                <div class="text" pardot-region=""
+                                                    style="padding: 0 3em; text-align: center">
+                                                    <h2 style="padding-top: 30px;">Lorem dolor.</h2>
 
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                                                    laboriosam dolorum similique adipisci aspernatur nobis quidem
-                                                    deserunt dicta? Ad, nostrum!</p>
+                                                    <p pardot-region="">Lorem, ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Soluta laboriosam dolorum similique adipisci
+                                                        aspernatur nobis quidem deserunt dicta? Ad, nostrum!</p>
 
-                                                <p><a class="btn btn-primary" href="#">call to action</a></p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <!-- end tr -->
-                    <tr>
-                        <td class="bg_white" pardot-data="" pardot-region="" style="background: rgb(250, 249, 249);">
-                            &nbsp;
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                                <tbody>
-                                    <tr pardot-region="" pardot-repeatable="">
-                                        <td class="bg_dark email-section" style="text-align:center;">
-                                            <div class="heading-section heading-section-white">
-                                                <h2>Welcome To Paladin</h2>
+                                                    <table border="0" cellpadding="0" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 20px 0;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td align="center" bgcolor="#a8002f"
+                                                                                    style="padding: 12px 18px 12px 18px; -webkit-border-radius:50px; border-radius: 50px">
+                                                                                    <a href="#"
+                                                                                        style="font-size: 15px; font-family: Montserrat, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none;">Call
+                                                                                        to Action →</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                                                    consectetur officia odio quia aliquam dolores, tenetur rerum nisi
-                                                    animi mollitia.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- end: tr -->
-                                    <tr>
-                                        <td class="bg_light email-section" style="text-align:center;">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="bg_light email-section" pardot-region=""
-                                                            style="padding: 0; width: 100%;">
-                                                            <table border="0" cellpadding="0" cellspacing="0"
-                                                                role="presentation" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td valign="middle" width="50%">
-                                                                            <table border="0" cellpadding="0"
-                                                                                cellspacing="0" role="presentation"
-                                                                                width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td class="text-services"
-                                                                                            style="text-align: left; padding: 20px 30px;">
-                                                                                            <div
-                                                                                                class="heading-section">
-                                                                                                <span
-                                                                                                    class="subheading">Lorem</span>
-                                                                                                <h2
-                                                                                                    style="font-size: 22px;">
-                                                                                                    Lorem ipsum dolor
-                                                                                                    sit amet,
-                                                                                                    consectetur
-                                                                                                    adipisicing elit.
-                                                                                                    Quibusdam, ad?</h2>
+                                                    <p>&nbsp;</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end tr -->
+                        <tr>
+                            <td class="bg_white" pardot-data="" pardot-region="" pardot-repeatable=""
+                                style="background: rgb(250, 249, 249)">&nbsp;
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td class="bg_light email-section" pardot-region="" pardot-repeatable=""
+                                                style="text-align: center">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="bg_light email-section" pardot-region=""
+                                                                style="padding: 0; width: 100%">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                    role="presentation" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="middle" width="50%">
+                                                                                <table border="0" cellpadding="0"
+                                                                                    cellspacing="0" role="presentation"
+                                                                                    width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="text-services"
+                                                                                                style="
+                                                  text-align: left;
+                                                  padding: 20px;
+                                                ">
+                                                                                                <div class="heading-section"
+                                                                                                    pardot-region="">
+                                                                                                    <span
+                                                                                                        class="subheading">Lorem</span>
+                                                                                                    <h2 pardot-region=""
+                                                                                                        style="font-size: 16px !important;">
+                                                                                                        Lorem ipsum
+                                                                                                        dolor sit amet,
+                                                                                                        consectetur
+                                                                                                        adipisicing
+                                                                                                        elit. Quibusdam,
+                                                                                                        ad?</h2>
 
-                                                                                                <p class="section-p">
-                                                                                                    Lorem, ipsum dolor
-                                                                                                    sit amet consectetur
-                                                                                                    adipisicing elit. A,
-                                                                                                    provident molestiae!
-                                                                                                    Impedit?</p>
+                                                                                                    <p class="section-p"
+                                                                                                        pardot-region=""
+                                                                                                        style="font-size: 15px !important;">
+                                                                                                        Lorem, ipsum
+                                                                                                        dolor sit amet
+                                                                                                        consectetur
+                                                                                                        adipisicing
+                                                                                                        elit. A,
+                                                                                                        provident
+                                                                                                        molestiae!
+                                                                                                        Impedit?</p>
 
-                                                                                                <p><a class="btn btn-primary"
-                                                                                                        href="#">Read
-                                                                                                        more</a></p>
-                                                                                            </div>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                        <td valign="middle" width="50%">
-                                                                            <table border="0" cellpadding="0"
-                                                                                cellspacing="0" role="presentation"
-                                                                                width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td><img alt=""
-                                                                                                src="https://www.colorcombos.com/images/colors/FFA300.png"
-                                                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <!-- end: tr -->
-                                                    <tr>
-                                                        <td class="bg_light email-section" pardot-region=""
-                                                            style="padding: 0; width: 100%;">
-                                                            <table border="0" cellpadding="0" cellspacing="0"
-                                                                role="presentation" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td valign="middle" width="50%">
-                                                                            <table border="0" cellpadding="0"
-                                                                                cellspacing="0" role="presentation"
-                                                                                width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td><img alt=""
-                                                                                                src="https://www.colorcombos.com/images/colors/FFA300.png"
-                                                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                        <td valign="middle" width="50%">
-                                                                            <table border="0" cellpadding="0"
-                                                                                cellspacing="0" role="presentation"
-                                                                                width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td class="text-services"
-                                                                                            style="text-align: left; padding: 20px 30px;">
-                                                                                            <div
-                                                                                                class="heading-section">
-                                                                                                <span
-                                                                                                    class="subheading">lorem</span>
-                                                                                                <h2
-                                                                                                    style="font-size: 22px;">
-                                                                                                    Lorem ipsum dolor
-                                                                                                    sit amet.</h2>
+                                                                                                    <p>&nbsp;</p>
 
-                                                                                                <p class="section-p">
-                                                                                                    Lorem ipsum dolor
-                                                                                                    sit amet
-                                                                                                    consectetur,
-                                                                                                    adipisicing elit.
-                                                                                                    Voluptas aliquid eum
-                                                                                                    fuga.</p>
+                                                                                                    <table border="0"
+                                                                                                        cellpadding="0"
+                                                                                                        width="100%">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td align="center"
+                                                                                                                    style="padding: 20px 0 0 0;">
+                                                                                                                    <table
+                                                                                                                        border="0"
+                                                                                                                        cellpadding="0"
+                                                                                                                        cellspacing="0">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td align="center"
+                                                                                                                                    bgcolor="#a8002f"
+                                                                                                                                    style="padding: 6px 10px; -webkit-border-radius:50px; border-radius: 50px">
+                                                                                                                                    <a href="#"
+                                                                                                                                        style="font-size: 11px !important; font-family: Montserrat, sans-serif; font-weight: normal; color: #ffffff !important; text-decoration: none;">More
+                                                                                                                                        →</a>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td valign="middle" width="40%">
+                                                                                <table border="0" cellpadding="0"
+                                                                                    cellspacing="0" role="presentation"
+                                                                                    width="100%">
+                                                                                    <tbody>
+                                                                                        <tr pardot-region="">
+                                                                                            <td><img alt=""
+                                                                                                    src="https://placeimg.com/150/200/tech/grayscale?t=1608177451494"
+                                                                                                    style="
+                                                    width: 100%;
+                                                    max-width: 600px;
+                                                    height: auto;
+                                                    margin: auto;
+                                                    display: block;
+                                                  "></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- end: tr -->
+                                                        <tr>
+                                                            <td class="bg_light email-section" pardot-region=""
+                                                                style="padding: 0; width: 100%">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                    role="presentation" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="middle" width="40%">
+                                                                                <table border="0" cellpadding="0"
+                                                                                    cellspacing="0" role="presentation"
+                                                                                    width="100%">
+                                                                                    <tbody>
+                                                                                        <tr pardot-region="">
+                                                                                            <td><img alt=""
+                                                                                                    src="https://placeimg.com/150/200/tech/grayscale?t=1608177390062"
+                                                                                                    style="
+                                                    width: 100%;
+                                                    max-width: 600px;
+                                                    height: auto;
+                                                    margin: auto;
+                                                    display: block;
+                                                  "></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td valign="middle" width="50%">
+                                                                                <table border="0" cellpadding="0"
+                                                                                    cellspacing="0" role="presentation"
+                                                                                    width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="text-services"
+                                                                                                style="
+                                                  text-align: left;
+                                                                                                                                       padding: 20px;
 
-                                                                                                <p><a class="btn btn-primary"
-                                                                                                        href="#">Read
-                                                                                                        more</a></p>
-                                                                                            </div>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <!-- end: tr -->
-                                                    <tr>
-                                                        <td class="bg_light email-section" pardot-region=""
-                                                            style="padding: 0; width: 100%;">
-                                                            <table border="0" cellpadding="0" cellspacing="0"
-                                                                role="presentation" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td valign="middle" width="50%">
-                                                                            <table border="0" cellpadding="0"
-                                                                                cellspacing="0" role="presentation"
-                                                                                width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td class="text-services"
-                                                                                            pardot-region=""
-                                                                                            style="text-align: left; padding: 20px 30px;">
-                                                                                            <div
-                                                                                                class="heading-section">
-                                                                                                <span
-                                                                                                    class="subheading">lorem</span>
-                                                                                                <h2
-                                                                                                    style="font-size: 22px;">
-                                                                                                    Lorem ipsum dolor
-                                                                                                    sit amet
-                                                                                                    consectetur.</h2>
+                                                ">
+                                                                                                <div class="heading-section"
+                                                                                                    pardot-region="">
+                                                                                                    <span
+                                                                                                        class="subheading">lorem</span>
+                                                                                                    <h2
+                                                                                                        style="font-size: 16px !important">
+                                                                                                        Lorem ipsum
+                                                                                                        dolor sit amet.
+                                                                                                    </h2>
 
-                                                                                                <p class="section-p">
-                                                                                                    Lorem ipsum, dolor
-                                                                                                    sit amet consectetur
-                                                                                                    adipisicing elit.
-                                                                                                    Rem velit debitis
-                                                                                                    assumenda?</p>
+                                                                                                    <p class="section-p"
+                                                                                                        style="font-size: 15px !important;">
+                                                                                                        Lorem ipsum
+                                                                                                        dolor sit amet
+                                                                                                        consectetur,
+                                                                                                        adipisicing
+                                                                                                        elit. Voluptas
+                                                                                                        aliquid eum
+                                                                                                        fuga.</p>
 
-                                                                                                <p><a class="btn btn-primary"
-                                                                                                        href="#">Read
-                                                                                                        more</a></p>
-                                                                                            </div>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                        <td valign="middle" width="50%">
-                                                                            <table border="0" cellpadding="0"
-                                                                                cellspacing="0" role="presentation"
-                                                                                width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td><img alt=""
-                                                                                                src="https://www.colorcombos.com/images/colors/FFA300.png"
-                                                                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <!-- end: tr -->
-                                                    <tr>
-                                                        <td class="bg_light email-section" pardot-region=""
-                                                            style="padding: 0; width: 100%;">
-                                                            <table border="0" cellpadding="0" cellspacing="0"
-                                                                role="presentation" width="100%">
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <!-- end: tr -->
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- end:tr -->
-            <!-- 1 Column Text + Button : END -->
+                                                                                                    <p>&nbsp;</p>
 
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;"
-                width="100%">
-                <tbody>
-                    <tr>
-                        <td class="bg_rasberry footer email-section" pardot-region="" valign="middle">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td style="padding-top: 20px;" valign="top" width="100%">
-                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                                width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="text-align: left; padding-right: 10px;"><img
-                                                                src="http://go.pardot.com/l/874871/2020-12-16/4hbcvc/874871/1608149411dweL9sdf/paladin_icon_2.png"
-                                                                style="width: 40px">
-                                                            <h3 class="heading">Paladin</h3>
+                                                                                                    <table border="0"
+                                                                                                        cellpadding="0"
+                                                                                                        width="100%">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td align="center"
+                                                                                                                    style="padding: 20px 0 0 0;">
+                                                                                                                    <table
+                                                                                                                        border="0"
+                                                                                                                        cellpadding="0"
+                                                                                                                        cellspacing="0">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td align="center"
+                                                                                                                                    bgcolor="#a8002f"
+                                                                                                                                    style="padding: 6px 10px; -webkit-border-radius:50px; border-radius: 50px">
+                                                                                                                                    <a href="#"
+                                                                                                                                        style="font-size: 11px; font-family: Montserrat, sans-serif; font-weight: normal; color: #ffffff !important; text-decoration: none;">More
+                                                                                                                                        →</a>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
 
-                                                            <p>{{Sender.Name}} {{Sender.Title}} {{Sender.Phone}}
-                                                                {{{Organization.Address}}}</p>
+                                                                                                                    <p>&nbsp;
+                                                                                                                    </p>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <!-- end: tr -->
+                                                                        <tr>
+                                                                            <td class="bg_light email-section"
+                                                                                pardot-region=""
+                                                                                style="padding: 0; width: 100%">
+                                                                                <table border="0" cellpadding="0"
+                                                                                    cellspacing="0" role="presentation"
+                                                                                    width="100%">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td valign="middle"
+                                                                                                width="50%">
+                                                                                                <table border="0"
+                                                                                                    cellpadding="0"
+                                                                                                    cellspacing="0"
+                                                                                                    role="presentation"
+                                                                                                    width="100%">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td class="text-services"
+                                                                                                                pardot-region=""
+                                                                                                                style="
+                                                  text-align: left;
+                                                  padding: 20px;
+                                                ">
+                                                                                                                <!-- end: tr -->
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td class="bg_light email-section"
+                                                                                                                pardot-region=""
+                                                                                                                style="padding: 0; width: 100%">
+                                                                                                                <table
+                                                                                                                    border="0"
+                                                                                                                    cellpadding="0"
+                                                                                                                    cellspacing="0"
+                                                                                                                    role="presentation"
+                                                                                                                    width="100%">
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <!-- end: tr -->
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <!-- end:tr -->
+                                                                <!-- 1 Column Text + Button : END -->
 
-                                                            <p class="unsubscribe">{{Unsubscribe}}</p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- end: tr -->
-        </div>
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation"
+                                                                    style="margin: auto" width="100%">
+                                                                    <tbody>
+                                                                        <tr pardot-region="" pardot-repeatable="">
+                                                                            <td class="bg_dark email-section" style="
+    text-align: center;
+    background: #00578a">
+                                                                                <div class="heading-section heading-section-white"
+                                                                                    pardot-region="">
+                                                                                    <h2>Welcome To Paladin</h2>
+
+                                                                                    <p>Lorem ipsum dolor sit amet
+                                                                                        consectetur adipisicing elit.
+                                                                                        Rem consectetur officia odio
+                                                                                        quia aliquam dolores, tenetur
+                                                                                        rerum nisi animi mollitia.</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation"
+                                                                    style="margin: auto" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="bg_rasberry footer email-section"
+                                                                                pardot-region="" valign="middle">
+                                                                                <table>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding-top: 20px"
+                                                                                                valign="top"
+                                                                                                width="100% !important">
+                                                                                                <table border="0"
+                                                                                                    cellpadding="0"
+                                                                                                    cellspacing="0"
+                                                                                                    role="presentation"
+                                                                                                    width="100%">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                style="text-align: left; padding-right: 10px">
+                                                                                                                <img src="http://go.pardot.com/l/874871/2020-12-16/4hbcvc/874871/1608149411dweL9sdf/paladin_icon_2.png"
+                                                                                                                    style="width: 40px">
+                                                                                                                <h3 class="heading"
+                                                                                                                    pardot-region="">
+                                                                                                                    Paladin
+                                                                                                                </h3>
+
+                                                                                                                <p>{{Sender.Name}}
+                                                                                                                    {{Sender.Title}}
+                                                                                                                    {{Sender.Phone}}
+                                                                                                                    {{{Organization.Address}}}
+                                                                                                                </p>
+
+                                                                                                                <p><a href="{{Unsubscribe}}"
+                                                                                                                        style="color: #ffffff !important; text-decoration: none; font-size: 11px;">Unsubscribe</a>
+                                                                                                                </p>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <!-- end: tr -->
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+        </center>
     </center>
 </body>
 
